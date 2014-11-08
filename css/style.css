@@ -17,7 +17,10 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .photo-me {
-	float: left;
 	margin-right: 1em;
 	width: 200px;
+	line-height: 0;
+	display: inline-block;
+	border: solid 4px white;
+	box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2);
 }
