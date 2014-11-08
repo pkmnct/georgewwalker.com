@@ -28,6 +28,7 @@ h1, h2, h3, h4, h5, h6, p {
 
 .button {
 	width: 100%;
+	background-color: #512888;
 }
 
 .links li {
