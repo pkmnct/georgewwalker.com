@@ -17,7 +17,8 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .photo-me {
-	margin-right: 1em;
+	margin: 1em;
+	margin-left: none;
 	width: 200px;
 	line-height: 0;
 	float: left;
@@ -25,6 +26,6 @@ h1, h2, h3, h4, h5, h6, p {
 	box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2);
 }
 
-.links.button {
+.button {
 	min-width: 200px;
 }
