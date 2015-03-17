@@ -56,12 +56,13 @@ contact-icons {
 	text-align: center;
 }
 
-
-
-
 .imageRow {
   *zoom: 1;
   margin: 20px 0;
+}
+
+.imageRow img {
+	max-height: 180pt;
 }
 
 .imageRow:after {
