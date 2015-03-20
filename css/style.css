@@ -56,7 +56,7 @@ h1, h2, h3, h4, h5, h6, p {
 	margin-right: auto;
 }
 
-.contact-icons h3 {
+.contact-icons h3, .contact-icons p {
 	text-align: center;
 }
 
