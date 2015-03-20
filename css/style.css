@@ -50,9 +50,13 @@ h1, h2, h3, h4, h5, h6, p {
 
 contact-icons img {
 	padding: 1em;
+	max-width: 66%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
 }
 
-contact-icons {
+contact-icons h3 {
 	text-align: center;
 }
 
