@@ -48,7 +48,7 @@ h1, h2, h3, h4, h5, h6, p {
 	padding-top: 25px;
 }
 
-contact-icons img {
+.contact-icons img {
 	padding: 1em;
 	max-width: 66%;
 	display: block;
@@ -56,7 +56,7 @@ contact-icons img {
 	margin-right: auto;
 }
 
-contact-icons h3 {
+.contact-icons h3 {
 	text-align: center;
 }
 
