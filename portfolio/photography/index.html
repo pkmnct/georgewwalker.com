@@ -5,7 +5,7 @@ page-name : photography
 ---
 
 <div class="imageRow">
-	<div class="imageSet">
+	<div class="imageSetTest">
 		<div class="imageSingle">
 			<a href="http://photos.collegianmedia.com/CollegianPhotos/news/Purple-Power-Play/i-Dv5WVft/1/X2/08.28.14.PPP.GW.01-X2.jpg" data-lightbox="photos" data-title="Rowan Minton, 2 year old Manhatan Resident, pets a blue heeler at Purple Power Play in Manhattan City Park on Aug. 26, 2014. The Manhattan Fire Department gave out plastic fire hats to many people who attended.">
 				<img src="http://photos.collegianmedia.com/CollegianPhotos/news/Purple-Power-Play/i-Dv5WVft/1/S/08.28.14.PPP.GW.01-S.jpg" alt="Rowan Minton, 2 year old Manhatan Resident, pets a blue heeler at Purple Power Play in Manhattan City Park on Aug. 26, 2014. The Manhattan Fire Department gave out plastic fire hats to many people who attended." title="Rowan Minton, 2 year old Manhatan Resident, pets a blue heeler at Purple Power Play in Manhattan City Park on Aug. 26, 2014. The Manhattan Fire Department gave out plastic fire hats to many people who attended.">
@@ -40,12 +40,12 @@ page-name : photography
    $(window).load(function () {
         $(document).ready(function(){
             collage();
-            $('.imageSet');
+            $('.imageSetTest');
         });
     });
 	
 	function collage() {
-        $('.imageSet').removeWhitespace().collagePlus(
+        $('.imageSetTest').removeWhitespace().collagePlus
             {
                 'fadeSpeed'     : 2000,
                 'targetHeight'  : 200,
@@ -58,7 +58,7 @@ page-name : photography
 	var resizeTimer = null;
     $(window).bind('resize', function() {
         // hide all the images until we resize them
-        $('.imageSet .imageSingle').css("opacity", 0);
+        $('.imageSetTest .imageSingle').css("opacity", 0);
         // set a timer to re-apply the plugin
         if (resizeTimer) clearTimeout(resizeTimer);
         resizeTimer = setTimeout(collage, 200);
