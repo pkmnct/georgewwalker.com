@@ -1,5 +1,5 @@
 html { 
-  background: url(/images/footer-tail.jpg) center 0 repeat #c9c8c9;
+  background: url('/images/background.jpg') center 0 repeat #c9c8c9;
   background-attachment: fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
