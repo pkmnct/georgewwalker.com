@@ -14,3 +14,7 @@ coverage
 .ruby-version
 .sass-cache
 tmp/stackprof-*
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+*.lnk
