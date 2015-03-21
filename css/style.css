@@ -43,6 +43,7 @@ color: #fff;
 	max-width: 1024px;
 	margin-left: auto;
 	margin-right: auto;
+	padding: 0 15px;
 }
 
 .sidebar {
@@ -59,6 +60,10 @@ color: #fff;
 
 .contact-icons h3, .contact-icons p {
 	text-align: center;
+}
+
+.contact-icons {
+	opacity: 0;
 }
 
 p, ul, li {
