@@ -25,18 +25,18 @@
 		
 		<script>
 			function collage() {
-				$('.Collage').collagePlus(
+				$('.Collage').removeWhitespace().collagePlus(
 					{
 						'fadeSpeed'				: 2000,
 						'targetHeight'				: 300,
-						'effect'						: 'effect-2',
-						'direction'					: 'vertical',
 						'allowPartialLastRow'	: true
 					}
 				);
 			}
 			
-			collage();
+			$(document).ready(function(){
+				collage();
+			});
 			
 			$(window).load(function() {
 				$('.Collage').collageCaption();
