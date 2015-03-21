@@ -119,20 +119,20 @@ p, ul, li {
 
 /* Colors for roygbv flag */
 #portfolio a:hover {
-	color: rgb(225,3,3);
+	background-color: rgb(225,3,3);
 }
 #photography a:hover {
-	color: rgb(255,140,0);
+	background-color: rgb(255,140,0);
 }
 #print a:hover {
-	color: rgb(255,237,0);
+	background-color: rgb(255,237,0);
 }
 #web a:hover {
-	color: rgb(0,128,38);
+	background-color: rgb(0,128,38);
 }
 #code a:hover {
-	color: rgb(0,77,255);
+	background-color: rgb(0,77,255);
 }
 #other a:hover {
-	color: rgb(117,7,135);
+	background-color: rgb(117,7,135);
 }
