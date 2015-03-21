@@ -37,7 +37,10 @@
 			}
 			
 			collage();
-			$('.Collage').collageCaption();
+			
+			$(window).load(function() {
+				$('.Collage').collageCaption();
+			});
 			
 			var resizeTimer = null;
 			$(window).bind('resize', function() {
