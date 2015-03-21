@@ -102,6 +102,11 @@ color: #fff;
   transition: all 0.2s ease-out;
 }
 
+.imageRow .imageSingle a h4 {
+	text-align: center;
+	padding-bottom: 10px;
+}
+
 .imageRow .imageSingle a img {
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
