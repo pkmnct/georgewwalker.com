@@ -21,6 +21,7 @@
 		<script type="text/javascript" src="/js/jquery.collagePlus.js"></script>
 		<script type="text/javascript" src="/js/jquery.removeWhitespace.js"></script>
 		<script type="text/javascript" src="/js/jquery.collageCaption.js"></script>
+		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/3.1.8/imagesloaded.js"></script>
 		
 		
 		<script>
@@ -29,13 +30,15 @@
 					{
 						'fadeSpeed'				: 2000,
 						'targetHeight'				: 300,
+						'effect'						: 'effect-2',
+						'direction'					: 'vertical',
 						'allowPartialLastRow'	: true
 					}
 				);
 			}
 			
-			$(document).ready(function(){
-				collage();
+			imagesLoaded( document.querySelector('.singleImage'), collage() {
+				console.log('all images are loaded');
 			});
 			
 			$(window).load(function() {
