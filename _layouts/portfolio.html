@@ -20,6 +20,35 @@
 		<script type="text/javascript" src="/js/jquery.collagePlus.min.js"></script>
 		<script type="text/javascript" src="/js/jquery.removeWhitespace.min.js"></script>
 		<script type="text/javascript" src="/js/jquery.collageCaption.min.js"></script>
+		
+		
+		<script>
+			$(window).load(function () {
+				$(document).ready(function(){
+					collage();
+					$('.Collage').collageCaption();
+				});
+			});
+			
+			function collage() {
+				$('.Collage').removeWhitespace().collagePlus(
+					{
+						'fadeSpeed'	: 2000,
+						'targetHeight'	: 300,
+						'effect'			: 'effect-2',
+						'direction'		: 'vertical'
+					}
+				);
+			};
+			
+			var resizeTimer = null;
+			$(window).bind('resize', function() {
+				$('.Collage .imageSingle').css("opacity", 0);
+				if (resizeTimer) clearTimeout(resizeTimer);
+				resizeTimer = setTimeout(collage, 200);
+			});
+		</script>
+		
 	</head>
 	<body>
 		<div class="fixed">
@@ -60,32 +89,6 @@
 				</section>
 			</div>
 		</div>
-		<script>
-			$(window).load(function () {
-				$(document).ready(function(){
-					collage();
-					$('.Collage').collageCaption();
-				});
-			});
-			
-			function collage() {
-				$('.Collage').removeWhitespace().collagePlus(
-					{
-						'fadeSpeed'	: 2000,
-						'targetHeight'	: 300,
-						'effect'			: 'effect-2',
-						'direction'		: 'vertical'
-					}
-				);
-			};
-			
-			var resizeTimer = null;
-			$(window).bind('resize', function() {
-				$('.Collage .imageSingle').css("opacity", 0);
-				if (resizeTimer) clearTimeout(resizeTimer);
-				resizeTimer = setTimeout(collage, 200);
-			});
-		</script>
 		<script>
 			$(document).foundation();
 			document.getElementById('{{page.page-name}}').className += ' active';
