@@ -200,5 +200,8 @@ p {
 	line-height: 1.625em;
 	font-family: "Open Sans","lucida grande",tahoma,sans-serif;
 	font-weight: 600;
-	-webkit-font-smoothing: antialiased;
+}
+
+.lb-number {
+	display: none;
 }
