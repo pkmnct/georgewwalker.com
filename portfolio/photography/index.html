@@ -29,6 +29,12 @@ page-name : photography
 $(document).ready(function() {
 
 	$("a.fancybox").fancybox({
+		
+		helpers : {
+			title: {
+				type: 'outside'
+			}
+		},
 		'transitionIn'	:	'elastic',
 		'transitionOut'	:	'elastic',
 		'speedIn'		:	600, 

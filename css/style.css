@@ -202,8 +202,3 @@ p {
 	font-weight: 600;
 	-webkit-font-smoothing: antialiased;
 }
-
-.fancybox-title-float-wrap .child {
-	line-height: inherit;
-	white-space: inherit;
-}
