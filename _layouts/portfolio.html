@@ -41,9 +41,7 @@
 			
 			var resizeTimer = null;
 			$(window).bind('resize', function() {
-				$('.Collage .imageSingle').css("opacity", 0);
-				if (resizeTimer) clearTimeout(resizeTimer);
-				resizeTimer = setTimeout(collage, 200);
+				collage();
 			});
 		</script>
 		
