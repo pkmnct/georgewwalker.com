@@ -102,39 +102,6 @@ p, ul, li {
     border-radius: 3px;
 }
 
-.effect-2 {
-    -webkit-transform: translateY(200px);
-    -moz-transform: translateY(200px);
-    transform: translateY(200px);
-    -webkit-animation: moveUp ease forwards;
-    -moz-animation: moveUp ease forwards;
-    animation: moveUp ease forwards;
-}
-
-@-webkit-keyframes moveUp {
-    to { -webkit-transform: translateY(0); opacity: 1; }
-}
-
-@-moz-keyframes moveUp {
-    to { -moz-transform: translateY(0); opacity: 1; }
-}
-
-@keyframes moveUp {
-    to { transform: translateY(0); opacity: 1; }
-}
-
-.effect-parent {
-    -webkit-perspective: 1300px;
-    -moz-perspective: 1300px;
-    perspective: 1300px;
-    }
-
-.effect-duration-1{
-    -webkit-animation-duration: .4s;
-    -moz-animation-duration:    .4s;
-    animation-duration:         .4s;
-}
-
 .Caption{
     font-size:14px;
     font-weight:normal;
