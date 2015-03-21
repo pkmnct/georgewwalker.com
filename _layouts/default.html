@@ -16,7 +16,6 @@
 		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/foundation/5.4.7/js/foundation/foundation.topbar.min.js"></script>
 		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jcarousel/0.3.1/jquery.jcarousel.min.js"></script>
 		<script type="text/javascript" src="//cdn.jsdelivr.net/jquery.touchwipe/1.1.1/jquery.touchwipe.min.js"></script>
-		<script type="text/javascript" src="/js/jquery.vegas.min.js"></script>
 		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.js"></script>
 	</head>
 	<body>
@@ -59,14 +58,6 @@
 		<script>
 			$(document).foundation();
 			document.getElementById('{{page.page-name}}').className += ' active';
-			$(function() {
-				$.vegas('slideshow', {
-					delay: 15000,
-					backgrounds: [
-					{src:'/images/andersonstars.jpg', fade:1000}
-					]
-				});
-			});
 		</script>
 	</body>
 </html>
