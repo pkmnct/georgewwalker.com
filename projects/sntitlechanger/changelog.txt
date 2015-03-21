@@ -1,0 +1,17 @@
+1.0.0:
+First Version, changes titles only on tickets
+
+1.0.1:
+Added several different titles
+
+1.0.2:
+Changed ticket titles to include short description
+
+1.0.3:
+Added requests, request titles now show number and short description
+Added check for ticket and request not within iframe.
+
+1.0.4:
+Fixed check for ticket and request not within iframe.
+Now tests if on kstate.service-now.com before running rest of script.
+Changed plugin URL.
