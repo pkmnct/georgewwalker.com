@@ -4,63 +4,68 @@ layout : default
 page-name : photography
 ---
 
-<div class="imageRow">
-	<div class="imageSetTest">
-		<div class="imageSingle">
+<div class="Collage effect-parent">
+		<div class="Image_Wrapper">
 			<a href="http://photos.collegianmedia.com/CollegianPhotos/news/Purple-Power-Play/i-Dv5WVft/1/X2/08.28.14.PPP.GW.01-X2.jpg" data-lightbox="photos" data-title="Rowan Minton, 2 year old Manhatan Resident, pets a blue heeler at Purple Power Play in Manhattan City Park on Aug. 26, 2014. The Manhattan Fire Department gave out plastic fire hats to many people who attended.">
 				<img src="http://photos.collegianmedia.com/CollegianPhotos/news/Purple-Power-Play/i-Dv5WVft/1/S/08.28.14.PPP.GW.01-S.jpg" alt="Rowan Minton, 2 year old Manhatan Resident, pets a blue heeler at Purple Power Play in Manhattan City Park on Aug. 26, 2014. The Manhattan Fire Department gave out plastic fire hats to many people who attended." title="Rowan Minton, 2 year old Manhatan Resident, pets a blue heeler at Purple Power Play in Manhattan City Park on Aug. 26, 2014. The Manhattan Fire Department gave out plastic fire hats to many people who attended.">
 			</a>
 		</div>
-		<div class="imageSingle">
+		<div class="Image_Wrapper">
 			<a href="/images/photos/10.06.14.SeatonHall.GW.01.jpg" data-lightbox="photos" data-title="Kaylee McIlvaine, freshman in environmental design, cuts foamboard for a simple space model in Seaton Hall on Oct. 6, 2014.">
 				<img src="/images/photos/10.06.14.SeatonHall.GW.01.jpg" alt="Kaylee McIlvaine, freshman in environmental design, cuts foamboard for a simple space model in Seaton Hall on Oct. 6, 2014." title="Kaylee McIlvaine, freshman in environmental design, cuts foamboard for a simple space model in Seaton Hall on Oct. 6, 2014.">
 			</a>
 		</div>
-		<div class="imageSingle">
+		<div class="Image_Wrapper">
 			<a href="/images/photos/10.17.14.AndersonStars.GW.01.jpg" data-lightbox="photos" data-title="Anderson Hall in front of stars on the night of Oct. 16, 2014">
 				<img src="/images/photos/10.17.14.AndersonStars.GW.01.jpg" alt="Anderson Hall in front of stars on the night of Oct. 16, 2014" title="Anderson Hall in front of stars on the night of Oct. 16, 2014">
 			</a>
 		</div>
-		<div class="imageSingle">
+		<div class="Image_Wrapper">
 			<a href="/images/photos/03.07.15.NoTrespassing.GW.01.jpg" data-lightbox="photos" data-title="No trespassing stenciling on the roof of Varney's on Mar. 7, 2015.">
 				<img src="/images/photos/03.07.15.NoTrespassing.GW.01.jpg" alt="No trespassing stenciling on the roof of Varney's on Mar. 7, 2015." title="No trespassing stenciling on the roof of Varney's on Mar. 7, 2015.">
 			</a>
 		</div>
-		<div class="imageSingle">
+		<div class="Image_Wrapper">
 			<a href="/images/photos/03.08.15.Birds.GW.01.jpg" data-lightbox="photos" data-title="A cardinal sings on a tree in front of Kedzie Hall on Mar. 8, 2015.">
 				<img src="/images/photos/03.08.15.Birds.GW.01.jpg" alt="A cardinal sings on a tree in front of Kedzie Hall on Mar. 8, 2015." title="A cardinal sings on a tree in front of Kedzie Hall on Mar. 8, 2015.">
 			</a>
 		</div>
-	</div>
 </div>
 
 
 
 <script>
-   $(window).load(function () {
+ 
+    // All images need to be loaded for this plugin to work so
+    // we end up waiting for the whole window to load in this example
+    $(window).load(function () {
         $(document).ready(function(){
             collage();
-            $('.imageSetTest');
+            $('.Collage').collageCaption();
         });
     });
-	
-	function collage() {
-        $('.imageSetTest').removeWhitespace().collagePlus
+
+
+    // Here we apply the actual CollagePlus plugin
+    function collage() {
+        $('.Collage').removeWhitespace().collagePlus(
             {
                 'fadeSpeed'     : 2000,
                 'targetHeight'  : 200,
-                'effect'        : 'effect-3',
+                'effect'        : 'effect-2',
                 'direction'     : 'vertical'
             }
         );
     };
-	
-	var resizeTimer = null;
+
+    // This is just for the case that the browser window is resized
+    var resizeTimer = null;
     $(window).bind('resize', function() {
         // hide all the images until we resize them
-        $('.imageSetTest .imageSingle').css("opacity", 0);
+        $('.Collage .Image_Wrapper').css("opacity", 0);
         // set a timer to re-apply the plugin
         if (resizeTimer) clearTimeout(resizeTimer);
         resizeTimer = setTimeout(collage, 200);
     });
+
 </script>
