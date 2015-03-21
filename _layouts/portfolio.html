@@ -24,15 +24,10 @@
 		
 		
 		<script>
-			$(window).load(function () {
-				$(document).ready(function(){
-					collage();
-					$('.Collage').collageCaption();
-				});
-			});
+
 			
 			function collage() {
-				$('.Collage').removeWhitespace().collagePlus(
+				$('.Collage').removeWhitespace().collageCaption().collagePlus(
 					{
 						'fadeSpeed'	: 2000,
 						'targetHeight'	: 300,
