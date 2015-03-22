@@ -1,5 +1,5 @@
 html { 
-  background: url('/images/main-shadow.png') center 0 no-repeat, url('/images/background.jpg') center 0 repeat #222;
+  background: url('/images/main-shadow-min.png') center 0 no-repeat, url('/images/background.jpg') center 0 repeat #222;
   background-attachment: fixed;
   min-height: 100%;
   min-width:100%;
