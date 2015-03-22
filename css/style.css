@@ -113,9 +113,13 @@ p, ul, li {
     font-family:arial;
 }
 
-.Caption_Content{
+.Caption_Content {
     color:#FFF;
     padding:20px;
+}
+
+.Caption_Content a {
+	text-decoration: underline;
 }
 
 .underline {
