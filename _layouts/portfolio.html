@@ -60,9 +60,9 @@
 			<header class="header small-12 columns">
 				<h1 class="page-title">{{ page.title }}</h1>
 			</header>
+			<img id="loading" src="https://cdnjs.cloudflare.com/ajax/libs/galleriffic/2.0.1/css/loaderWhite.gif" alt="loading..." />
 			<div class="content-container">
 				<section class="Collage effect-parent columns">
-				<img id="loading" src="https://cdnjs.cloudflare.com/ajax/libs/galleriffic/2.0.1/css/loaderWhite.gif" alt="loading..." />
 					{{content}}
 				</section>
 			</div>
@@ -79,7 +79,7 @@
 			loaded_images_count++;
 			
 			if (loaded_images_count == $images.length) {
-				document.getElementById('loading').css("opacity", 0);
+				$('#loading').css("opacity", 0);
 				collage();
 				$('.Collage').collageCaption();
 			}
