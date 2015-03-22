@@ -29,11 +29,19 @@
 		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/3.1.8/imagesloaded.pkgd.js"></script>
 	
 		<script>
-		 $(window).load(function() {
-			setTimeout(collage(), 8000);
-			$('.Collage').collageCaption();
+		var $images = $('.imageSingle img');
+		var loaded_images_count = 0;
+		
+		$images.load(function() {
+			loaded_images_count++;
+			
+			if (loaded_images_count == $images.length) {
+				collage();
+				$('.Collage').collageCaption();
+			}
+			
 		});
-
+		
 		function collage() {
 			$('.Collage').removeWhitespace().collagePlus(
 				{
