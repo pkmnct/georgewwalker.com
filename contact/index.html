@@ -34,13 +34,14 @@ layout : default
 <script>
 var $images = $('.contact-icons a img');
 		var loaded_images_count = 0;
+		$('#loading').css("opacity", 0);
 		
 		$images.load(function() {
 			loaded_images_count++;
 			
 			if (loaded_images_count == $images.length) {
 				$('#loading').css("opacity", 0);
-				$('.contact-icons').css('effect-2 effect-duration-1');
+				$('.contact-icons').addClass('effect-2 effect-duration-1');
 			}
 			
 		});
