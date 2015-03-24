@@ -6,8 +6,8 @@ layout : default
 <img id="loading" src="https://cdnjs.cloudflare.com/ajax/libs/galleriffic/2.0.1/css/loaderWhite.gif" alt="loading..." />
 <div class="row">
 	<div class="row centered-text">
-		<form action="//formspree.io/george@georgewwalker.com" method="POST">
-			<h2 id="success-message"></h2>
+		<form name="contact" action="//formspree.io/george@georgewwalker.com" onsubmit="return validateForm()" method="POST">
+			<h2 id="validation-message"></h2>
 			<div id="form-name"><h4>Name</h4><input type="text" name="name"></div>
     		<div id="form-email"><h4>Email</h4><input type="email" name="_replyto"></div>
     		<div id="form-message"><h4>Message</h4><textarea name="body"></textarea></div>
@@ -38,6 +38,22 @@ var $images = $('.contact-icons a img');
       return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(location.search)||[,""])[1].replace(/\+/g, '%20'))||null
    }
    if (getURLParameter('success') == "true") {
-      document.getElementById('success-message').innerText = 'Thanks for the message! I will get back with you soon.';
+      document.getElementById('validation-message').innerText = 'Thanks for the message! I will get back with you soon.';
+   }
+   function validateForm() {
+      var form = document.forms["contact"];
+      var validationError = document.getElementById('validation-message');
+      if (form["name"].value == null || form["name"].value == "") {
+         validationError.innerText += "Please enter a name.<br>";
+         return false;
+      }
+      if (form["_replyto"].value == null || form["_replyto"].value == "") {
+         validationError.innerText += "Please enter an email.<br>";
+         return false;
+      }
+      if (form["body"].value == null || form["body"].value == "") {
+         validationError.innerText += "Please enter a message.<br>";
+         return false;
+      }
    }
 </script>
