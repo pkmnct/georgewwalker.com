@@ -34,12 +34,10 @@ var $images = $('.contact-icons a img');
 </script>
 
 <script type="text/javascript">
-function getURLParameter(name) {
-  return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(location.search)||[,""])[1].replace(/\+/g, '%20'))||null
-}
-success-status = getURLParameter('success');
-
-if (success-status == "true") {
-		document.getElementById('success-message').innerText = 'Thanks for the message! I will get back with you soon.';
-}
+   function getURLParameter(name) {
+      return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(location.search)||[,""])[1].replace(/\+/g, '%20'))||null
+   }
+   if (getURLParameter('success') == "true") {
+      document.getElementById('success-message').innerText = 'Thanks for the message! I will get back with you soon.';
+   }
 </script>
