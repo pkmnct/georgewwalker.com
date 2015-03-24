@@ -1,0 +1,31 @@
+---
+title : Contact Form
+page-name : contact
+layout : default
+---
+<img id="loading" src="https://cdnjs.cloudflare.com/ajax/libs/galleriffic/2.0.1/css/loaderWhite.gif" alt="loading..." />
+<div class="row">
+	<div class="row centered-text">
+		<form action="//formspree.io/george@georgewwalker.com">
+			<input type="text" name="name">
+    		<input type="email" name="_replyto">
+    		<input type="submit" value="Send">
+		</form>
+	</div>
+</div>
+
+<script>
+var $images = $('.contact-icons a img');
+		var loaded_images_count = 0;
+		$('#loading').css("opacity", 0);
+		
+		$images.load(function() {
+			loaded_images_count++;
+			
+			if (loaded_images_count == $images.length) {
+				$('#loading').css("opacity", 0);
+				$('.contact-icons').addClass('effect-2 effect-duration-1');
+			}
+			
+		});
+</script>
