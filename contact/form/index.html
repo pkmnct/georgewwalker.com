@@ -42,17 +42,21 @@ var $images = $('.contact-icons a img');
    }
    function validateForm() {
       var form = document.forms["contact"];
+      var error = false;
       var validationError = document.getElementById('validation-message');
       if (form["name"].value == null || form["name"].value == "") {
-         validationError.innerText += "Please enter a name.<br>";
-         return false;
+         validationError.innerText += "Please enter a name.\n";
+         error = true;
       }
       if (form["_replyto"].value == null || form["_replyto"].value == "") {
-         validationError.innerText += "Please enter an email.<br>";
-         return false;
+         validationError.innerText += "Please enter an email.\n";
+         error = true;
       }
       if (form["body"].value == null || form["body"].value == "") {
-         validationError.innerText += "Please enter a message.<br>";
+         validationError.innerText += "Please enter a message.\n";
+         error = true;
+      }
+      if (error) {
          return false;
       }
    }
