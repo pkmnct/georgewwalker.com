@@ -5,13 +5,13 @@ layout : default
 ---
 <img id="loading" src="https://cdnjs.cloudflare.com/ajax/libs/galleriffic/2.0.1/css/loaderWhite.gif" alt="loading..." />
 <div class="row">
-	<div class="row centered-text">
+	<div class="row centered-text effect-2 effect-duration-1" style="opacity: 0;">
 		<form name="contact" action="//formspree.io/george@georgewwalker.com" onsubmit="return validateForm()" method="POST">
 			<h3 id="validation-message"></h3>
 			<div id="form-name"><h4>Name</h4><input type="text" name="name"></div>
     		<div id="form-email"><h4>Email</h4><input type="email" name="_replyto"></div>
-    		<div id="form-message"><h4>Message</h4><textarea name="body"></textarea></div>
-    		<div id="form-submit"><input type="submit" value="Send"></div>
+    		<div id="form-message"><h4>Message</h4><textarea name="body" rows="6"></textarea></div>
+    		<div id="form-submit"><input class="button" style="max-width: 100px;" type="submit" value="Send"></div>
     		<div id="form-hidden"><input type="text" name="_gotcha" style="display:none" /> <input type="hidden" name="_next" value="//www.georgewwalker.com/contact/form/?success=true" /></div>
 		</form>
 	</div>
