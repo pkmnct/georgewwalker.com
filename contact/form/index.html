@@ -6,7 +6,7 @@ layout : default
 <div class="row">
 	<div class="row centered-text">
 		<form name="contact" action="//formspree.io/george@georgewwalker.com" onsubmit="return validateForm()" method="POST">
-			<h3 id="validation-message"></h3>
+			<h3 id="validation-message" style="opacity: 0;"></h3>
 			<div id="form-name" class="effect-2 effect-duration-1"><h4>Name</h4><input type="text" name="name"></div>
     		<div id="form-email" class="effect-2 effect-duration-2"><h4>Email</h4><input type="email" name="_replyto"></div>
     		<div id="form-message"class="effect-2 effect-duration-3"><h4>Message</h4><textarea name="body" rows="6"></textarea></div>
@@ -21,7 +21,8 @@ layout : default
       return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(location.search)||[,""])[1].replace(/\+/g, '%20'))||null
    }
    if (getURLParameter('success') == "true") {
-      document.getElementById('validation-message').innerText = 'Thanks for the message! I will get back with you soon.';
+      $('#validation-message').innerText = 'Thanks for the message! I will get back with you soon.';
+      $('#validation-message').addClass("effect-2 effect-duration-1");
    }
    function validateForm() {
       var form = document.forms["contact"];
@@ -42,6 +43,7 @@ layout : default
       }
       if (error) {
          validationError.style.color = "#F77";
+         validationError.addClass("effect-2 effect-duration-1");
          return false;
       }
    }
