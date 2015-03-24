@@ -7,10 +7,12 @@ layout : default
 <div class="row">
 	<div class="row centered-text">
 		<form action="//formspree.io/george@georgewwalker.com" method="POST">
+			<h2 id="success-message"></h2>
 			<div id="form-name"><h4>Name</h4><input type="text" name="name"></div>
     		<div id="form-email"><h4>Email</h4><input type="email" name="_replyto"></div>
     		<div id="form-message"><h4>Message</h4><textarea name="body"></textarea></div>
-    		<div id="form-submit"><input type="submit" value="Send"> <input type="text" name="_gotcha" style="display:none" /></div>
+    		<div id="form-submit"><input type="submit" value="Send"></div>
+    		<div id="form-hidden"><input type="text" name="_gotcha" style="display:none" /> <input type="hidden" name="_next" value="//www.georgewwalker.com/contact/form/?success=true" /></div>
 		</form>
 	</div>
 </div>
@@ -29,4 +31,15 @@ var $images = $('.contact-icons a img');
 			}
 			
 		});
+</script>
+
+<script type="text/javascript">
+function getURLParameter(name) {
+  return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(location.search)||[,""])[1].replace(/\+/g, '%20'))||null
+}
+success-status = getURLParameter('success');
+
+if (success-status == "true") {
+		document.getElementById('success-message').innerText = 'Thanks for the message! I will get back with you soon.';
+}
 </script>
