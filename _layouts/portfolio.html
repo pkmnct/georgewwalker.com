@@ -21,7 +21,7 @@
 
 		<!-- Portfolio page-specific -->
 		<link href="//cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/css/lightbox.css" rel="stylesheet" type="text/css">
-		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.0/imagesloaded.pkgd.min.js"></script>
+
 		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/js/lightbox.min.js"></script>
 		<script type="text/javascript" src="/js/jquery.collagePlus.js"></script>
 		<script type="text/javascript" src="/js/jquery.removeWhitespace.js"></script>
@@ -72,11 +72,20 @@
 			document.getElementById('{{page.page-name}}').className += ' active';
 		</script>
 		<script>
-		$('.Collage .effect-parent').imagesLoaded( function() {
+		var $images = $('.imageSingle a img');
+		var loaded_images_count = 0;
+		var collage_occured = false;
+
+		$images.load(function() {
+			loaded_images_count++;
+
+			if (loaded_images_count == $images.length) {
 				$('#loading').css("opacity", 0);
 				collage();
 				$('.Collage').collageCaption();
-			});
+			}
+
+		});
 
 		function collage() {
 			$('.Collage').removeWhitespace().collagePlus(
@@ -88,6 +97,7 @@
 					'allowPartialLastRow':true
 				}
 			);
+			collage_occured = true;
 		};
 
 		var resizeTimer = null;
@@ -96,6 +106,9 @@
 			if (resizeTimer) clearTimeout(resizeTimer);
 			resizeTimer = setTimeout(collage, 200);
 		});
+		if (collage_occured == false) {
+			setTimeout(collage, 18000)
+		}
 		</script>
 		<script>
 			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
