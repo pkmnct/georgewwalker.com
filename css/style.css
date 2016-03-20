@@ -174,3 +174,14 @@ p, ul, li {
 	margin-top:-32px;
 	opacity: .7;
 }
+
+.large-symbol {
+	    text-align: center;
+    font-size: 8em;
+    color: white;
+    text-shadow: 0 -1px 0 black;
+    line-height: 1.625em;
+    font-family: "Open Sans","lucida grande",tahoma,sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
