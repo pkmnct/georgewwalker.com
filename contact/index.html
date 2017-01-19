@@ -34,6 +34,7 @@ layout : default
 <script>
 var $images = $('.contact-icons a img');
 		var loaded_images_count = 0;
+		var images_loaded = false;
 		$('#loading').css("opacity", 0);
 		
 		$images.load(function() {
@@ -42,7 +43,16 @@ var $images = $('.contact-icons a img');
 			if (loaded_images_count == $images.length) {
 				$('#loading').css("opacity", 0);
 				$('.contact-icons').addClass('effect-2 effect-duration-1');
+				images_loaded = true;
 			}
 			
 		});
+		$(window).load(function() {
+		    if (!images_loaded) {
+                if (collage_occured == false) {
+                    $('#loading').css("opacity", 0);
+                    $('.contact-icons').addClass('effect-2 effect-duration-1');
+                }
+            }
+        });
 </script>
