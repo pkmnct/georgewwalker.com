@@ -55,6 +55,10 @@ color: #fff;
 	padding-top: 25px;
 }
 
+.contact-icons {
+	opacity: 0;
+}
+
 .contact-icons img {
 	padding: 1em;
 	max-width: 66%;
@@ -67,6 +71,9 @@ color: #fff;
 	text-align: center;
 }
 
+.effect-2 {
+	opacity: 0;
+}
 
 p, ul, li {
 	color: white;
@@ -99,6 +106,8 @@ p, ul, li {
 }
 
 .Image_Wrapper{
+    /* to get the fade in effect, set opacity to 0 on the first element within the gallery area */
+    opacity:0;
     -moz-box-shadow:0px 2px 4px rgba(0, 0, 0, 0.1);
     -webkit-box-shadow:0px 2px 4px rgba(0, 0, 0, 0.1);
     box-shadow:0px 2px 4px rgba(0, 0, 0, 0.1);
@@ -126,6 +135,9 @@ p, ul, li {
 	text-decoration: underline;
 }
 
+.imageSingle {
+	opacity: 0;
+}
 
 /* Colors for roygbv flag */
 #portfolio a:hover {
