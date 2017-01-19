@@ -106,7 +106,7 @@
                 if (resizeTimer) clearTimeout(resizeTimer);
                 resizeTimer = setTimeout(collage, 200);
             });
-            $(document).ready(function() {
+            window.onload = function() {
 		        if (collage_occured == false) {
                     collage();
                 }
