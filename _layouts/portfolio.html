@@ -72,43 +72,45 @@
 			document.getElementById('{{page.page-name}}').className += ' active';
 		</script>
 		<script>
-		var $images = $('.imageSingle a img');
-		var loaded_images_count = 0;
-		var collage_occured = false;
+		$(document).ready() {
+            var $images = $('.imageSingle a img');
+            var loaded_images_count = 0;
+            var collage_occured = false;
 
-		$images.load(function() {
-			loaded_images_count++;
+            $images.load(function() {
+                loaded_images_count++;
 
-			if (loaded_images_count == $images.length) {
-				$('#loading').css("opacity", 0);
-				collage();
-				$('.Collage').collageCaption();
-			}
+                if (loaded_images_count == $images.length) {
+                    $('#loading').css("opacity", 0);
+                    collage();
+                    $('.Collage').collageCaption();
+                }
 
-		});
+            });
 
-		function collage() {
-			$('.Collage').removeWhitespace().collagePlus(
-				{
-					'fadeSpeed'     : 2000,
-					'targetHeight'  : 400,
-					'effect'        : 'effect-2',
-					'direction'     : 'vertical',
-					'allowPartialLastRow':true
-				}
-			);
-			collage_occured = true;
-		};
+            function collage() {
+                $('.Collage').removeWhitespace().collagePlus(
+                    {
+                        'fadeSpeed'     : 2000,
+                        'targetHeight'  : 400,
+                        'effect'        : 'effect-2',
+                        'direction'     : 'vertical',
+                        'allowPartialLastRow':true
+                    }
+                );
+                collage_occured = true;
+            };
 
-		var resizeTimer = null;
-		$(window).bind('resize', function() {
-			$('.Collage .imageSingle').css("opacity", 0);
-			if (resizeTimer) clearTimeout(resizeTimer);
-			resizeTimer = setTimeout(collage, 200);
-		});
-		if (collage_occured == false) {
-			setTimeout(collage, 18000)
-		}
+            var resizeTimer = null;
+            $(window).bind('resize', function() {
+                $('.Collage .imageSingle').css("opacity", 0);
+                if (resizeTimer) clearTimeout(resizeTimer);
+                resizeTimer = setTimeout(collage, 200);
+            });
+            if (collage_occured == false) {
+                setTimeout(collage, 18000)
+            }
+        }
 		</script>
 		<script>
 			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
