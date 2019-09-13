@@ -76,22 +76,22 @@ const Header = (props: RouteComponentProps) => {
           <Logo />
         </StyledLink>
         <Navigation>
-          <NavigationLink to="/software">Software Engineer</NavigationLink>
+          <NavigationLink to="/software/">Software Engineer</NavigationLink>
           <NavigationLink
-            to="/web"
+            to="/web/"
             onMouseEnter={handleWebMouseEnter}
             onMouseLeave={handleWebMouseLeave}
           >
             Web Developer
           </NavigationLink>
           <NavigationLink
-            to="/photo"
+            to="/photo/"
             onMouseEnter={handlePhotoMouseEnter}
             onMouseLeave={handlePhotoMouseLeave}
           >
             Photographer
           </NavigationLink>
-          <NavigationLink to="/tech">Tech Enthusiast</NavigationLink>
+          <NavigationLink to="/tech/">Tech Enthusiast</NavigationLink>
         </Navigation>
       </StyledHeader>
     </>

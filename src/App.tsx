@@ -10,10 +10,10 @@ const App = () => {
   return (
     <BrowserRouter>
       <Header />
-      <Route exact path="/Software" component={Software} />
-      <Route exact path="/Tech" component={Tech} />
-      <Route exact path="/Photo" component={Photo} />
-      <Route exact path="/Web" component={Web} />
+      <Route exact path="/Software/" component={Software} />
+      <Route exact path="/Tech/" component={Tech} />
+      <Route exact path="/Photo/" component={Photo} />
+      <Route exact path="/Web/" component={Web} />
     </BrowserRouter>
   );
 };
