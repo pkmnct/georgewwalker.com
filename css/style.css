@@ -20,7 +20,8 @@ hr {
 }
 
 a {
-color: #fff;
+	color: #fff;
+	text-decoration: underline;
 }
 
 .photo-me {
@@ -38,6 +39,10 @@ color: #fff;
 
 .button {
 	width: 100%;
+}
+
+.button a {
+	text-decoration: none;
 }
 
 .links li {
